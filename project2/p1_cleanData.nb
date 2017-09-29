@@ -1,0 +1,133 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3814,        125]
+NotebookOptionsPosition[      3336,        105]
+NotebookOutlinePosition[      3696,        121]
+CellTagsIndexPosition[      3653,        118]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SetDirectory", "@", 
+   RowBox[{"NotebookDirectory", "[", "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.704571290948031*^9, 3.704571299743002*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"actors", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{"\"\<../data/actor_movies.txt\>\"", ",", "\"\<String\>\""}], 
+    "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.7045713018238363`*^9, 3.704571364549718*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"actress", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{"\"\<../data/actress_movies.txt\>\"", ",", "\"\<String\>\""}], 
+    "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.704572648164877*^9, 3.704572670841724*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"cleanData", "[", "str_", "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"actors", ",", "cleanedActorData"}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"actors", "=", 
+      RowBox[{"StringSplit", "[", 
+       RowBox[{"str", ",", "\"\<\\n\>\""}], "]"}]}], ";", 
+     RowBox[{"actors", "=", 
+      RowBox[{"Map", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"StringSplit", "[", 
+          RowBox[{"#", ",", "\"\<\\t\\t\>\""}], "]"}], "&"}], ",", "actors"}],
+        "]"}]}], ";", 
+     RowBox[{"actors", "=", 
+      RowBox[{"Select", "[", 
+       RowBox[{"actors", ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Length", "[", "#", "]"}], ">", "4"}], "&"}]}], "]"}]}], 
+     ";", 
+     RowBox[{"Return", "@", 
+      RowBox[{"Map", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"StringReplace", "[", 
+          RowBox[{"#", ",", " ", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"StartOfString", " ", "~~", "Whitespace"}], ")"}], " ", 
+             "|", " ", 
+             RowBox[{"(", 
+              RowBox[{"Whitespace", " ", "~~", " ", "EndOfString"}], ")"}]}], 
+            " ", "\[Rule]", " ", "\"\<\>\""}]}], "]"}], "&"}], ",", "actors", 
+        ",", "2"}], "]"}]}]}]}], "\[IndentingNewLine]", "]"}]}]], "Input",
+ CellChangeTimes->{{3.7045724269249*^9, 3.704572540137429*^9}, {
+  3.704572586172279*^9, 3.704572594015497*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"actors", " ", "=", 
+   RowBox[{"cleanData", "[", "actors", "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.704572557485689*^9, 3.70457257018145*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"actress", "=", 
+   RowBox[{"cleanData", "[", "actress", "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.704572674966449*^9, 3.704572683079726*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"actor", "=", 
+   RowBox[{"Join", "[", 
+    RowBox[{"actors", ",", "actress"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.704573321944824*^9, 3.704573335895483*^9}}]
+},
+WindowSize->{808, 655},
+WindowMargins->{{158, Automatic}, {Automatic, 26}},
+FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 184, 4, 32, "Input"],
+Cell[745, 26, 248, 6, 32, "Input"],
+Cell[996, 34, 249, 6, 32, "Input"],
+Cell[1248, 42, 1504, 42, 201, "Input"],
+Cell[2755, 86, 184, 4, 32, "Input"],
+Cell[2942, 92, 182, 4, 32, "Input"],
+Cell[3127, 98, 205, 5, 32, "Input"]
+}
+]
+*)
+

@@ -1,0 +1,26 @@
+      V1       V2                   V3    
+ [1,] "229150" "Flowers, Bess"      " 828"
+ [2,] " 72860" "Harris, Sam (II)"   " 600"
+ [3,] " 84685" "Jeremy, Ron"        " 637"
+ [4,] "119071" "Miller, Harold (I)" " 561"
+ [5,] "173419" "Tatasciore, Fred"   " 355"
+ [6,] "105846" "Lowenthal, Yuri"    " 318"
+ [7,] "148998" "Roberts, Eric (I)"  " 298"
+ [8,] " 89223" "Kaufman, Lloyd"     " 301"
+ [9,] "156827" "Sayre, Jeffrey"     " 430"
+[10,] "138341" "Phelps, Lee (I)"    " 647"
+
+      V1       V2                   V3   
+ [1,] "229150" "Flowers, Bess"      "828"
+ [2,] " 72860" "Harris, Sam (II)"   "600"
+ [3,] " 84685" "Jeremy, Ron"        "637"
+ [4,] "119071" "Miller, Harold (I)" "561"
+ [5,] "173419" "Tatasciore, Fred"   "355"
+ [6,] "105846" "Lowenthal, Yuri"    "318"
+ [7,] "148998" "Roberts, Eric (I)"  "298"
+ [8,] "156827" "Sayre, Jeffrey"     "430"
+ [9,] "138341" "Phelps, Lee (I)"    "647"
+[10,] " 89223" "Kaufman, Lloyd"     "301"
+
+ [1] 1.430903e-04 1.240157e-04 1.200513e-04 1.088546e-04 1.071018e-04 1.018113e-04
+ [7] 1.000352e-04 9.053905e-05 8.940069e-05 8.889768e-05

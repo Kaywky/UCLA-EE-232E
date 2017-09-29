@@ -1,0 +1,124 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3403,        116]
+NotebookOptionsPosition[      2747,         89]
+NotebookOutlinePosition[      3109,        105]
+CellTagsIndexPosition[      3066,        102]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"SetDirectory", "@", 
+   RowBox[{"NotebookDirectory", "[", "]"}]}], ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"<<", "actRelation.mx"}]], "Input",
+ CellChangeTimes->{{3.704585678707099*^9, 3.704585695541749*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"l", "=", 
+  RowBox[{"Length", "@", "actRelation"}]}]], "Input",
+ CellChangeTimes->{{3.704586644414585*^9, 3.704586648166658*^9}, {
+  3.704586774086503*^9, 3.704586778139378*^9}}],
+
+Cell[BoxData["47941691"], "Output",
+ CellChangeTimes->{3.704586648511627*^9, 3.704586778589427*^9, 
+  3.704587333296151*^9, 3.7045880487365522`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"actRelation", "=", 
+   RowBox[{"Normal", "@", "actRelation"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.704586829451466*^9, 3.704586834996996*^9}, {
+   3.7045869646709213`*^9, 3.7045869701277657`*^9}, 3.704587073455147*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{"\"\<actRelation.txt\>\"", ",", "actRelation"}], "]"}]], "Input",
+ CellChangeTimes->{{3.70458818922689*^9, 3.7045882065274687`*^9}}],
+
+Cell[BoxData["\<\"actRelation.txt\"\>"], "Output",
+ CellChangeTimes->{3.7045889600130177`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"actGraph", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{"\"\<actRelation.txt\>\"", ",", "\"\<String\>\""}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.704601839605855*^9, 3.704601869720098*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"actGraph", "=", 
+   RowBox[{"StringReplace", "[", 
+    RowBox[{"actGraph", ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"\"\<{\>\"", "\[Rule]", "\"\<\>\""}], ",", 
+       RowBox[{"\"\<}\>\"", "\[Rule]", "\"\<,\>\""}], ",", 
+       RowBox[{"\"\<-\>\"", "\[Rule]", "\"\<\>\""}], ",", 
+       RowBox[{"\"\<>\>\"", "\[Rule]", "\"\<\>\""}]}], "}"}]}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.704601879464406*^9, 3.704601982206251*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{"\"\<actGraph.txt\>\"", ",", "actGraph"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.7046020826108*^9, 3.7046020968879213`*^9}, {
+  3.704602236802039*^9, 3.704602271583695*^9}}]
+},
+WindowSize->{808, 655},
+WindowMargins->{{173, Automatic}, {-135, Automatic}},
+FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 118, 3, 32, "Input"],
+Cell[679, 25, 124, 2, 32, "Input"],
+Cell[CellGroupData[{
+Cell[828, 31, 202, 4, 32, "Input"],
+Cell[1033, 37, 148, 2, 32, "Output"]
+}, Open  ]],
+Cell[1196, 42, 258, 5, 32, "Input"],
+Cell[CellGroupData[{
+Cell[1479, 51, 181, 3, 32, "Input"],
+Cell[1663, 56, 94, 1, 32, "Output"]
+}, Open  ]],
+Cell[1772, 60, 237, 6, 32, "Input"],
+Cell[2012, 68, 486, 12, 32, "Input"],
+Cell[2501, 82, 242, 5, 32, "Input"]
+}
+]
+*)
+
