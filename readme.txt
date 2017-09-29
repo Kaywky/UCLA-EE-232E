@@ -1,3 +1,3 @@
-The zipfile contains problem1.r, problem2.r, problem3.r, problem4.r, and Homework1_report.pdf.
-The programs are written in problemX.r. They can be run directly under R environment. All the parameters are set in the program. Each sub questions are noted as #(a)/(b)/(c). 
-The numeric answers for each question are all printed and the figures are all saved in .pdf files.
+The zipfile contains problem1-5.r, problem6.r, and Homework3_report.pdf.
+The 2 program files can be run directly under R environment with igraph and netrw libraries installed and sorted_directed_net.txt data file in the right directory. All the parameters are set in the program. Each problem is noted as #(1)/(2)/(3)/(4)/(5)/(6). 
+The numeric answers for each question are all printed and the figures are all saved in .pdf or .tiff files.
